@@ -1,4 +1,4 @@
-var data;
+let data;
 let container = document.querySelector('.container')
 
 fetch(`./assets/forbes.json`)
@@ -39,3 +39,4 @@ setTimeout(()=>{
     
   }//for
 }, 100)//timeout
+
