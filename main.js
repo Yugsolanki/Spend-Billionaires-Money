@@ -1,4 +1,5 @@
 let data;
+
 let container = document.querySelector('.container')
 
 fetch(`./assets/forbes.json`)
@@ -19,24 +20,58 @@ setTimeout(()=>{
     
     let worth = networthCalc().toString();
     
-    class yug {
+    class billClass {
       constructor (name, image, worth) {
-        this.container = container;
         let profile = document.createElement("div");
         profile.classList.add('profile');
         
         profile.innerHTML = `
-          <img src="${image}" alt="${name}" />
-      <h2>${name}</h2>
-      <h3>$${worth}</h3>
-      <a href="spend.html">Spend</a> 
+          <img class="img" src="${image}" alt="${name}" />
+      <h2 class="name">${name}</h2>
+      <h3 class="worth">$${worth}</h3>
+      <a onclick="select('${name}','${image}', '${worth}')" href="spend.html">Spend</a> 
         `;
-        container.append(profile)
+        
+        let page = window.location.href;
+        if (page.slice(-10)==="index.html") {
+          container.append(profile)
+        }
       }
     }
     
-    let print = new yug(name, image, worth);
+    let print = new billClass(name, image, worth);
     
   }//for
 }, 100)//timeout
 
+
+/////////PAGE 2/////////
+let name, image, worth;
+
+function select(nam,img,net) {
+  localStorage.setItem("name", nam);
+  localStorage.setItem("image", img);
+  localStorage.setItem("worth", net)
+}; 
+
+function getVal() {
+  name = localStorage.getItem("name");
+  image = localStorage.getItem("image");
+  if (image.slice(0,6)!=="https:"){
+    image="https:"+image;
+  }
+  worth = localStorage.getItem("worth");
+}
+
+let page = window.location.href;
+if (page.slice(-10) === "spend.html") {
+  getVal()
+  let billionaire = document.querySelector('.selectedBil');
+  billionaire.innerHTML = `
+    <img src="${image}" alt="${name}" />
+    <div>
+      <h2>${name}</h2>
+      <h3>$${worth} Billion</h3>
+    </div>
+  `
+}

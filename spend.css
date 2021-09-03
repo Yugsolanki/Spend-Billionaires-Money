@@ -36,6 +36,7 @@ body {
   font-size: 1.5rem;
   background: var(--offwhite);
   overflow-x: hidden;
+  display: grid;
 }
 
 .nav {
@@ -52,12 +53,20 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.name {
-  font-family: nidsans;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 1.5rem 0rem;
+.selectedBil {
+  width: 80%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin: 1.5rem auto;
+  border: 2px solid var(--blue);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.selectedBil img {
+  width: 8.5rem;
 }
 
 section {
