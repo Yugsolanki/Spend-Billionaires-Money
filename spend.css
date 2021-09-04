@@ -54,7 +54,7 @@ body {
   align-items: center;
   font-family: Montserrat;
   column-gap: 1rem;
-  margin: 2.5rem auto 2rem auto;
+  margin: 2.5rem auto 1.5rem auto;
   border: 2px solid var(--blue);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -62,6 +62,36 @@ body {
 .selectedBil img {
   width: 8.5rem;
 }
+
+.result {
+  height: 10rem;
+  width: 90%;
+  margin: 1rem auto;
+  border: 2px solid var(--blue);
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.result div:nth-child(1) span:nth-child(2) {
+  color: var(--blue);
+}
+
+.result div:nth-child(2) span:nth-child(2) {
+  color: var(--blue);
+}
+
+.result div:nth-child(3) span:nth-child(even) {
+  color: var(--blue);
+}
+
 
 section {
   display: grid;
@@ -133,33 +163,4 @@ section {
 .btn button:hover {
   background: var(--blue);
   color: var(--white);
-}
-
-.result {
-  height: 10rem;
-  width: 90%;
-  margin: 2rem auto;
-  border: 2px solid var(--blue);
-  padding: 1rem;
-  border-radius: 4px;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 1.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.result div:nth-child(1) span:nth-child(2) {
-  color: var(--blue);
-}
-
-.result div:nth-child(2) span:nth-child(2) {
-  color: var(--blue);
-}
-
-.result div:nth-child(3) span:nth-child(even) {
-  color: var(--blue);
 }

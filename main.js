@@ -63,7 +63,7 @@ setTimeout(()=>{
     let print = new billClass(name, image, worth);
     
   }//for
-}, 3000)//timeout
+}, 2000)//timeout
 
 
 /////////PAGE 2/////////
