@@ -96,10 +96,15 @@ body {
 section {
   display: grid;
   margin: 0rem 0rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 1rem;
   justify-items: center;
   padding: 0px 10px;
+}
+
+@media only screen and (max-width: 767px)  {  section {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {

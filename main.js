@@ -11,7 +11,7 @@ let data;
 
 let container = document.querySelector('.container')
 
-fetch(`https://forbes400.herokuapp.com/api/forbes400?limit=10`)
+fetch(`https://forbes400.herokuapp.com/api/forbes400?limit=12`)
   .then(response => {return response.json()})
   .then(res => {data = res})
   
