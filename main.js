@@ -34,11 +34,16 @@ setTimeout(()=>{
       }
       netWorth = str;
     }());
-    
     function networthCalc() {
-      var ar = netWorth.toString().split('');
-      ar.splice(3, 1, '.');
-      return ar.join('').toString().slice(0,5);
+      if (netWorth.length>=12) {
+        var ar = netWorth.toString().split('');
+        ar.splice(3, 1, '.');
+        return ar.join('').toString().slice(0,5);
+      } else if (netWorth.length=11){
+        var ar = netWorth.toString().split('');
+        ar.splice(2, 1, '.');
+        return ar.join('').toString().slice(0, 5);
+      }
     }
     
     let worth = networthCalc().toString();
