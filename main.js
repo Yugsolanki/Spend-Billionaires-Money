@@ -1,5 +1,5 @@
-let page = window.location.href;
-if (page.slice(-10) === "index.html") {
+
+if ($('body').is('.index')) {
   let box = document.querySelector('.box')
   $(window).on("load", () => {
     $(box).delay(2000).fadeOut(800);
@@ -55,7 +55,7 @@ setTimeout(()=>{
       <a onclick="select('${name}','${image}', '${worth}', '${netWorth}')" href="spend.html">Spend</a> 
         `;
         
-        if (page.slice(-10)==="index.html") {
+        if ($('body').is('.index')) {
           container.append(profile)
         }
       }
@@ -86,7 +86,7 @@ function getVal() {
   fullWorth = localStorage.getItem("fullWorth");
 }
 
-if (page.slice(-10) === "spend.html") {
+if ($('body').is('.spend')) {
   getVal()
   let billionaire = document.querySelector('.selectedBil');
   billionaire.innerHTML = `
