@@ -1,12 +1,4 @@
-@font-face {
-  font-family: nidsans;
-  src: url(./assets/font/nidsans-webfont.woff);
-}
-
-@font-face {
-  font-family: blanka;
-  src: url(./assets/font/Blanka-Regular.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
   font-family: anurati;
@@ -67,10 +59,10 @@ section {
   background: var(--white);
   border-radius: 4px;
   display: grid;
-  row-gap: .75rem;
+  row-gap: .5rem;
   justify-items: center;
   text-align: center;
-  font-family: nidsans;
+  font-family: Montserrat;
   letter-spacing: 1px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
