@@ -2,7 +2,7 @@
 if ($('body').is('.index')) {
   let box = document.querySelector('.box')
   $(window).on("load", () => {
-    $(box).delay(2000).fadeOut(800);
+    $(box).delay(000).fadeOut(800);
   })
 }
 

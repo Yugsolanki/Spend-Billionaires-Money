@@ -242,3 +242,48 @@ svg.tea #steamR {
     opacity: 0;
   }
 }
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.sm-btn {
+  height: 8rem;
+  width: 90%;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto 2rem auto;
+  border: 2px solid var(--blue);
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.sm-btn .social {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: black;
+  margin: auto;
+  color: #fff;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.sm-btn .social:nth-of-type(1) {
+  background: linear-gradient(90deg,#ca3726,#e0675a)
+}
+.sm-btn .social:nth-of-type(2) {
+  background: linear-gradient(90deg, #09c6f9, #045de9)
+}
+.sm-btn .social:nth-of-type(3) {
+  background: linear-gradient(90deg,#ca2fde,#ed7236)
+}
+.sm-btn .social:nth-of-type(4) {
+  background: linear-gradient(90deg, #1197d5, #0c6792)
+}
+.sm-btn .social:nth-of-type(5) {
+  background: linear-gradient(90deg, #000000, #494949)
+}
