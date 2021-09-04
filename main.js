@@ -2,7 +2,7 @@
 if ($('body').is('.index')) {
   let box = document.querySelector('.box')
   $(window).on("load", () => {
-    $(box).delay(000).fadeOut(800);
+    $(box).delay(2000).fadeOut(800);
   })
 }
 
@@ -51,7 +51,7 @@ setTimeout(()=>{
         profile.innerHTML = `
           <img class="img" src="${image}" alt="${name}" />
       <h2 class="name">${name}</h2>
-      <h3 class="worth">$${worth}</h3>
+      <h3 class="worth">$${worth} Billion</h3>
       <a onclick="select('${name}','${image}', '${worth}', '${netWorth}')" href="spend.html">Spend</a> 
         `;
         

@@ -68,6 +68,11 @@ section {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.profile h3 {
+  color: #5B5B5B;
+  font-size: 1.7rem;
+}
+
 .profile img {
   width: 65%;
   border-radius: 50%;
@@ -78,6 +83,7 @@ section {
   position: relative;
   width: 55%;
   height: 3rem;
+  margin: .75rem 0;
   font-family: nidsans;
   font-weight: bold;
   background: var(--white);
