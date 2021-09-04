@@ -1,3 +1,12 @@
+let page = window.location.href;
+if (page.slice(-10) === "index.html") {
+  let box = document.querySelector('.box')
+  $(window).on("load", () => {
+    $(box).delay(2000).fadeOut(800);
+  })
+}
+
+
 let data;
 
 let container = document.querySelector('.container')
@@ -46,7 +55,6 @@ setTimeout(()=>{
       <a onclick="select('${name}','${image}', '${worth}', '${netWorth}')" href="spend.html">Spend</a> 
         `;
         
-        let page = window.location.href;
         if (page.slice(-10)==="index.html") {
           container.append(profile)
         }
@@ -55,7 +63,7 @@ setTimeout(()=>{
     let print = new billClass(name, image, worth);
     
   }//for
-}, 100)//timeout
+}, 3000)//timeout
 
 
 /////////PAGE 2/////////
@@ -77,8 +85,6 @@ function getVal() {
   worth = localStorage.getItem("worth");
   fullWorth = localStorage.getItem("fullWorth");
 }
-
-let page = window.location.href;
 
 if (page.slice(-10) === "spend.html") {
   getVal()
