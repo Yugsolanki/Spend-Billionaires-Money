@@ -2,18 +2,14 @@
 if ($('body').is('.index')) {
   let box = document.querySelector('.box')
   $(window).on("load", () => {
-    $(box).delay(2000).fadeOut(800);
+    $(box).delay(5000).fadeOut(500);
   })
 }
 
 
-let data;
-
 let container = document.querySelector('.container')
 
-fetch(`https://forbes400.herokuapp.com/api/forbes400?limit=12`)
-  .then(response => {return response.json()})
-  .then(res => {data = res})
+
   
 setTimeout(()=>{
   
@@ -68,7 +64,7 @@ setTimeout(()=>{
     let print = new billClass(name, image, worth);
     
   }//for
-}, 2000)//timeout
+}, 4000)//timeout
 
 
 /////////PAGE 2/////////
